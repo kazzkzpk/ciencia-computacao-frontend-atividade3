@@ -5,65 +5,85 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ONG Impacto Social - Transformando Vidas</title>
 
-        <style>
-            .banner-wrapper {
-                height: 300px;
-            }
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <header class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.jpg" alt="Logotipo da ONG Impacto Social">
+                </a>
 
-    <header>
-        <a href="index.html">
-            <img src="img/logo.jpg" alt="Logotipo da ONG Impacto Social">
-        </a>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-toggle-label">&#9776;</label> <nav class="main-nav">
+                <ul class="menu-principal">
+                    <li class="menu-item"><a href="index.html" class="menu-link">Início</a></li>
+                    <li class="menu-item">
+                        <a href="projetos.html" class="menu-link">Projetos</a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="projetos.html#nossos-projetos" class="menu-link">Ver Todos</a></li>
+                            <li class="submenu-item"><a href="cadastro.html" class="menu-link">Voluntariado</a></li>
+                            <li class="submenu-item"><a href="projetos.html#doacao" class="menu-link">Como Doar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="cadastro.html" class="menu-link">Cadastro</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos e Voluntariado</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-    </header>
+        <main>
 
-    <main>
+            <section class="hero-section" aria-labelledby="titulo-principal">
+                <img src="img/banner-principal.jpg" alt="Crianças sorrindo em uma atividade da ONG">
+                <div class="container hero-content">
+                    <h1 id="titulo-principal">ONG Impacto Social: Mudando Realidades</h1>
+                    <p>Junte-se a nós na missão de construir um futuro mais justo e solidário.</p>
+                    <a href="projetos.html" class="btn btn-primary">Saiba Mais</a>
+                    <a href="cadastro.html" class="btn btn-secondary">Seja Voluntário</a>
+                </div>
+            </section>
 
-        <section aria-labelledby="titulo-principal">
-            <img class="banner-wrapper" src="img/banner-principal.jpg" alt="Crianças sorrindo em uma atividade da ONG">
-            <h1 id="titulo-principal">ONG Impacto Social: Mudando Realidades</h1>
-            <p>Junte-se a nós na missão de construir um futuro mais justo e solidário.</p>
-        </section>
+            <section class="container" aria-labelledby="sobre-nos">
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center; margin-top: var(--spacing-5);">
+                        <h2 id="sobre-nos">Sobre Nós</h2>
+                        <p>A Impacto Social é uma organização sem fins lucrativos dedicada a promover o desenvolvimento comunitário através da educação, saúde e cultura.</p>
+                    </div>
 
-        <section aria-labelledby="sobre-nos">
-            <h2 id="sobre-nos">Sobre Nós</h2>
-            <p>A Impacto Social é uma organização sem fins lucrativos dedicada a promover o desenvolvimento comunitário através da educação, saúde e cultura.</p>
+                    <article class="col-md-6">
+                        <h3>Nossa Missão</h3>
+                        <p>Nossa missão é criar oportunidades para que indivíduos em situação de vulnerabilidade possam alcançar seu pleno potencial.</p>
+                    </article>
 
-            <article>
-                <h3>Nossa Missão</h3>
-                <p>Nossa missão é criar oportunidades para que indivíduos em situação de vulnerabilidade possam alcançar seu pleno potencial.</p>
-            </article>
+                    <article class="col-md-6">
+                        <h3>Nossa Visão</h3>
+                        <p>Ser referência em transformação social, inspirando uma rede de solidariedade e impacto positivo duradouro.</p>
+                    </article>
+                </div>
+            </section>
 
-            <article>
-                <h3>Nossa Visão</h3>
-                <p>Ser referência em transformação social, inspirando uma rede de solidariedade e impacto positivo duradouro.</p>
-            </article>
-        </section>
+        </main>
 
-    </main>
+        <footer class="main-footer">
+            <div class="container">
+                <section aria-labelledby="contato-footer">
+                    <h2 id="contato-footer" style="display:none;">Informações de Contato</h2>
+                    <address>
+                        Rua da Esperança, 123 - Centro<br>
+                        São Paulo - SP, CEP: 01000-000<br>
+                        Telefone: (11) 99999-8888 | Email: <a href="mailto:contato@impactosocial.exemplo.org">contato@impactosocial.exemplo.org</a>
+                    </address>
+                </section>
 
-    <footer>
-        <section aria-labelledby="contato">
-            <h2 id="contato">Informações de Contato</h2>
-            <address>
-                Rua da Esperança, 123 - Centro<br>
-                São Paulo - SP, CEP: 01000-000<br>
-                Telefone: (11) 99999-8888<br>
-                Email: <a href="mailto:contato@impactosocial.exemplo.org">contato@impactosocial.exemplo.org</a>
-            </address>
-        </section>
-
-        <p>&copy; 2025 ONG Fictícia 'Impacto Social'. Todos os direitos reservados.</p>
-    </footer>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 ONG Fictícia 'Impacto Social'. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

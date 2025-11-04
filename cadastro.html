@@ -4,109 +4,147 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cadastro - ONG Impacto Social</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-
-    <header>
-        <a href="index.html">
-            <img src="img/logo.jpg" alt="Logotipo da ONG Impacto Social">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos e Voluntariado</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Formulário de Cadastro</h1>
-        <p>Preencha o formulário abaixo para se cadastrar como voluntário ou apoiador.</p>
-
-        <form action="#" method="get">
-            <fieldset>
-                <legend>Informações Pessoais</legend>
-
-                <div>
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                </div>
-
-                <div>
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" required
-                           pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
-                           placeholder="000.000.000-00"
-                           title="Formato: 000.000.000-00">
-                </div>
-
-                <div>
-                    <label for="telefone">Telefone (Celular):</label>
-                    <input type="tel" id="telefone" name="telefone" required
-                           pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
-                           placeholder="(00) 00000-0000"
-                           title="Formato: (00) 00000-0000">
-                </div>
-
-                <div>
-                    <label for="nascimento">Data de Nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Endereço</legend>
-
-                <div>
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" required
-                           pattern="[0-9]{5}-[0-9]{3}"
-                           placeholder="00000-000"
-                           title="Formato: 00000-000">
-                </div>
-
-                <div>
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" required>
-                </div>
-
-                <div>
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" required>
-                </div>
-
-                <div>
-                    <label for="estado">Estado:</label>
-                    <input type="text" id="estado" name="estado" required>
-                </div>
-            </fieldset>
-
-            <div>
-                <button type="submit">Enviar Cadastro</button>
-                <button type="reset">Limpar</button>
+        <header class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.jpg" alt="Logotipo da ONG Impacto Social">
+                </a>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+                <nav class="main-nav">
+                    <ul class="menu-principal">
+                        <li class="menu-item"><a href="index.html" class="menu-link">Início</a></li>
+                        <li class="menu-item">
+                            <a href="projetos.html" class="menu-link">Projetos</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="projetos.html#nossos-projetos" class="menu-link">Ver Todos</a></li>
+                                <li class="submenu-item"><a href="cadastro.html" class="menu-link">Voluntariado</a></li>
+                                <li class="submenu-item"><a href="projetos.html#doacao" class="menu-link">Como Doar</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="cadastro.html" class="menu-link">Cadastro</a></li>
+                    </ul>
+                </nav>
             </div>
-        </form>
-    </main>
+        </header>
 
-    <footer>
-        <section aria-labelledby="contato-footer">
-            <h2 id="contato-footer">Informações de Contato</h2>
-            <address>
-                Rua da Esperança, 123 - Centro<br>
-                São Paulo - SP, CEP: 01000-000<br>
-                Telefone: (11) 99999-8888<br>
-                Email: <a href="mailto:contato@impactosocial.org">contato@impactosocial.exemplo.org</a>
-            </address>
-        </section>
+        <main>
+            <header class="page-header">
+                <div class="container">
+                    <h1>Formulário de Cadastro</h1>
+                    <p>Preencha o formulário abaixo para se cadastrar como voluntário ou apoiador.</p>
+                </div>
+            </header>
 
-        <p>&copy; 2025 ONG Fictícia 'Impacto Social'. Todos os direitos reservados.</p>
-    </footer>
+            <section class="container" style="margin-top: var(--spacing-5);">
+                <div class="row">
+                    <div class="col-lg-8" style="margin: 0 auto;">
+
+                        <div class="alert alert-success">
+                            <strong>Seja bem-vindo!</strong> Seus dados são confidenciais e estão seguros conosco.
+                        </div>
+
+                        <form action="#" method="get" class="form-container">
+
+                            <fieldset>
+                                <legend>Informações Pessoais</legend>
+
+                                <div class="form-group">
+                                    <label for="nome">Nome Completo:</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" required placeholder="Digite seu nome completo">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" id="email" name="email" class="form-control" required placeholder="seu@email.com">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="cpf">CPF:</label>
+                                        <input type="text" id="cpf" name="cpf" class="form-control" required
+                                               pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                                               placeholder="000.000.000-00"
+                                               title="Formato: 000.000.000-00">
+                                    </div>
+
+                                    <div class="col-md-6 form-group">
+                                        <label for="telefone">Telefone (Celular):</label>
+                                        <input type="tel" id="telefone" name="telefone" class="form-control" required
+                                               pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                                               placeholder="(00) 00000-0000"
+                                               title="Formato: (00) 00000-0000">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="nascimento">Data de Nascimento:</label>
+                                    <input type="date" id="nascimento" name="nascimento" class="form-control" required>
+                                </div>
+
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Endereço</legend>
+                                <div class="row">
+                                    <div class="col-md-4 form-group">
+                                        <label for="cep">CEP:</label>
+                                        <input type="text" id="cep" name="cep" class="form-control" required
+                                               pattern="[0-9]{5}-[0-9]{3}"
+                                               placeholder="00000-000"
+                                               title="Formato: 00000-000">
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <label for="endereco">Endereço:</label>
+                                        <input type="text" id="endereco" name="endereco" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="cidade">Cidade:</label>
+                                        <input type="text" id="cidade" name="cidade" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="estado">Estado:</label>
+                                        <input type="text" id="estado" name="estado" class="form-control" required>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                                <button type="reset" class="btn btn-secondary" style="background-color: var(--color-text-light);">Limpar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="main-footer">
+            <div class="container">
+                <section aria-labelledby="contato-footer">
+                    <h2 id="contato-footer" style="display:none;">Informações de Contato</h2>
+                    <address>
+                        Rua da Esperança, 123 - Centro<br>
+                        São Paulo - SP, CEP: 01000-000<br>
+                        Telefone: (11) 99999-8888 | Email: <a href="mailto:contato@impactosocial.exemplo.org">contato@impactosocial.exemplo.org</a>
+                    </address>
+                </section>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 ONG Fictícia 'Impacto Social'. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
 
     </body>
 </html>

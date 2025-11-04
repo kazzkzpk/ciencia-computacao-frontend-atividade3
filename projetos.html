@@ -5,75 +5,127 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projetos e Voluntariado - ONG Impacto Social</title>
 
-        <style>
-            .img-wrapper {
-                height: 200px;
-            }
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <a href="index.html">
-                <img src="img/logo.jpg" alt="Logotipo da ONG Impacto Social">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html">Projetos e Voluntariado</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
-                </ul>
-            </nav>
+        <header class="main-header">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.jpg" alt="Logotipo da ONG Impacto Social">
+                </a>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+                <nav class="main-nav">
+                    <ul class="menu-principal">
+                        <li class="menu-item"><a href="index.html" class="menu-link">Início</a></li>
+                        <li class="menu-item">
+                            <a href="projetos.html" class="menu-link">Projetos</a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="projetos.html#nossos-projetos" class="menu-link">Ver Todos</a></li>
+                                <li class="submenu-item"><a href="cadastro.html" class="menu-link">Voluntariado</a></li>
+                                <li class="submenu-item"><a href="projetos.html#doacao" class="menu-link">Como Doar</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="cadastro.html" class="menu-link">Cadastro</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
+            <header class="page-header">
+                <div class="container">
+                    <h1>Nossas Frentes de Atuação</h1>
+                    <p>Conheça os projetos que estão mudando vidas e descubra como você pode fazer parte disso.</p>
+                </div>
+            </header>
 
-            <h1>Nossas Frentes de Atuação</h1>
-            <p>Conheça os projetos que estão mudando vidas e descubra como você pode fazer parte disso.</p>
+            <section id="nossos-projetos" class="container" aria-labelledby="titulo-projetos" style="margin-top: var(--spacing-5);">
+                <h2 id="titulo-projetos" style="text-align: center;">Projetos Sociais em Destaque</h2>
 
-            <section aria-labelledby="nossos-projetos">
-                <h2 id="nossos-projetos">Projetos Sociais em Destaque</h2>
+                <div class="row">
+                    <article class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="img/projeto-educacao.jpg" alt="Sala de aula com crianças estudando" class="card-img">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-primary">Educação</span>
+                                    <span class="badge badge-secondary">Infantil</span>
+                                </div>
+                                <h3 class="card-title">Educação para o Futuro</h3>
+                                <p>Oferecemos reforço escolar, oficinas de leitura e acesso à tecnologia para crianças e adolescentes.</p>
+                                <a href="cadastro.html" class="btn btn-primary">Quero Ajudar</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <article>
-                    <img class="img-wrapper" src="img/projeto-educacao.jpg" alt="Sala de aula com crianças estudando">
-                    <h3>Educação para o Futuro</h3>
-                    <p>Oferecemos reforço escolar, oficinas de leitura e acesso à tecnologia para crianças e adolescentes de comunidades carentes.</p>
-                </article>
+                    <article class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="img/projeto-saude.jpg" alt="Profissional de saúde aferindo pressão" class="card-img">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-primary">Saúde</span>
+                                    <span class="badge badge-secondary">Comunidade</span>
+                                </div>
+                                <h3 class="card-title">Saúde Comunitária</h3>
+                                <p>Levamos atendimento médico e odontológico básico, além de palestras sobre prevenção de doenças.</p>
+                                <a href="cadastro.html" class="btn btn-primary">Quero Ajudar</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <article>
-                    <img class="img-wrapper" src="img/projeto-saude.jpg" alt="Profissional de saúde aferindo pressão de um paciente">
-                    <h3>Saúde Comunitária</h3>
-                    <p>Levamos atendimento médico e odontológico básico, além de palestras sobre prevenção de doenças, para áreas de difícil acesso.</p>
-                </article>
+                    <article class="col-md-12 col-lg-4">
+                        <div class="card">
+                            <img src="img/voluntariado.jpg" alt="Grupo de voluntários felizes" class="card-img">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-secondary">Voluntariado</span>
+                                </div>
+                                <h3 class="card-title">Seja um Voluntário</h3>
+                                <p>Sua habilidade pode transformar vidas. Temos vagas para voluntários em diversas áreas.</p>
+                                <a href="cadastro.html" class="btn btn-secondary">Quero ser voluntário!</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
 
-            <section aria-labelledby="voluntariado">
-                <h2 id="voluntariado">Seja um Voluntário</h2>
-                <img class="img-wrapper" src="img/voluntariado.jpg" alt="Grupo de voluntários felizes trabalhando juntos">
-                <p>Sua habilidade pode transformar vidas. Temos vagas para voluntários em diversas áreas, desde apoio administrativo até atuação direta nos projetos.</p>
-                <a href="cadastro.html">Quero ser voluntário!</a>
-            </section>
-
-            <section aria-labelledby="doacao">
-                <h2 id="doacao">Como Doar</h2>
-                <p>Sua doação é fundamental para mantermos nossos projetos. Aceitamos contribuições de qualquer valor.</p>
-                <p><strong>PIX:</strong> 00.000.000/0001-00 (CNPJ)</p>
-                <p>Para outras formas de doação, <a href="cadastro.html">clique aqui</a>.</p>
+            <section id="doacao" class="container" aria-labelledby="titulo-doacao" style="margin-top: var(--spacing-5);">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/doacao.jpg" alt="Ilustração de uma doador abraçando crianças da ONG" style="border-radius: var(--border-radius);">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 id="titulo-doacao">Como Doar</h2>
+                        <p>Sua doação é fundamental para mantermos nossos projetos. Aceitamos contribuições de qualquer valor.</p>
+                        <p><strong>PIX (CNPJ):</strong> 00.000.000/0001-00</p>
+                        <p>Para outras formas de doação ou para se tornar um doador recorrente, preencha nosso cadastro.</p>
+                        <a href="cadastro.html" class="btn btn-primary">Cadastrar para Doar</a>
+                    </div>
+                </div>
             </section>
 
         </main>
 
-        <footer>
-            <section aria-labelledby="contato-footer">
-                <h2 id="contato-footer">Informações de Contato</h2>
-                <address>
-                    Rua da Esperança, 123 - Centro<br>
-                    São Paulo - SP, CEP: 01000-000<br>
-                    Telefone: (11) 99999-8888<br>
-                    Email: <a href="mailto:contato@impactosocial.exemplo.org">contato@impactosocial.exemplo.org</a>
-                </address>
-            </section>
+        <footer class="main-footer">
+            <div class="container">
+                <section aria-labelledby="contato-footer">
+                    <h2 id="contato-footer" style="display:none;">Informações de Contato</h2>
+                    <address>
+                        Rua da Esperança, 123 - Centro<br>
+                        São Paulo - SP, CEP: 01000-000<br>
+                        Telefone: (11) 99999-8888 | Email: <a href="mailto:contato@impactosocial.exemplo.org">contato@impactosocial.exemplo.org</a>
+                    </address>
+                </section>
 
-            <p>&copy; 2025 ONG Fictícia 'Impacto Social'. Todos os direitos reservados.</p>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 ONG Fictícia 'Impacto Social'. Todos os direitos reservados.</p>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
