@@ -5,4 +5,4 @@
 ---
 
 ## Atividade 2
-W3C validado.
+Atividade 1 com CSS.
